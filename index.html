@@ -63,6 +63,12 @@
             transition: transform 0.3s ease;
         }
 
+        .whatsapp-float img {
+            width: 100%;         /* Faz a imagem ocupar toda a largura do círculo */
+            height: 100%;        /* Faz a imagem ocupar toda a altura do círculo */
+            object-fit: cover;   /* Garante que a imagem preencha o espaço sem distorcer */
+        }
+
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
@@ -175,6 +181,7 @@
 </body>
 
 </html>
+
 
 
 
