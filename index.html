@@ -7,11 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        body { background-color: #f8f9fa; }
-        /* Estilização para a coluna única */
+        body { background-color: #729ac3; } 
+
+
+
+      
         .feed-container {
-            max-width: 600px; /* Largura ideal para leitura e foco */
+            max-width: 600px; 
             margin: 0 auto;
+           background-color: rgba(240, 248, 255, 0.80);
         }
         .card {
             margin-bottom: 2rem; /* Espaço entre os projetos */
@@ -21,12 +25,17 @@
         section { padding: 40px 0; }
         .nav-link { color: rgba(255,255,255,0.7) !important; }
         .nav-link:hover { color: white !important; }
+
+        h2, .card-body{
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
     <header class="sticky-top">
-        <ul class="nav justify-content-end bg-dark p-2">
+        <ul class="nav justify-content-center bg-dark p-2">
             <li class="nav-item"><a class="nav-link" href="#hm">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#sb">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="#pj">Projetos</a></li>
@@ -44,7 +53,10 @@
         </section>
 
         <section id="sb">
-            <h2 class="mb-4">Sobre mim</h2>
+            <div class="card shadow-sm">
+                
+                <div class="card-body">
+                    <h2 class="mb-4">Sobre mim</h2>
             <p>Criar: desenhando, escrevendo, ou programando, é a minha locomotiva.
                Comecei no desenho manual, passei a escrever poemas, depois contos,
                e há alguns anos passei a programar. Criar me motiva demais.
@@ -52,6 +64,10 @@
                Esse portfólio veio da necessidade de colocar online um pouco do que
                fiz ao longo desses anos.
             </p>
+                
+                </div>
+            </div>
+           
         </section>
 
         <section id="pj">
