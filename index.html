@@ -63,18 +63,41 @@
         transition: transform 0.3s ease;
     }
 
-    .whatsapp-float img {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: none !important;
-        object-fit: cover; /* Faz a imagem tentar preencher tudo */
-        
-        /* Aumente esse número (ex: 1.8, 2.0) até o verde sumir totalmente */
-        transform: scale(1.6); 
-        
-        /* Aplica a sombra direto no desenho do ícone */
-        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3));
-    }
+    .whatsapp-float {
+    position: fixed;
+    width: 60px;          /* Ajuste o tamanho final do ícone aqui */
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: transparent !important; /* Remove qualquer fundo */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: none !important; /* Remove a sombra azulada do container */
+    transition: transform 0.3s ease;
+    overflow: visible; /* Permite que a imagem apareça sem cortes se necessário */
+}
+
+/* A imagem cresce para preencher o espaço */
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém o desenho original sem distorcer */
+    display: block;
+    
+    /* Se a sua imagem tiver bordas brancas/transparentes internas, 
+       use o scale abaixo para "esticar" ela até as bordas */
+    transform: scale(1.2); 
+    
+    /* Adicionamos a sombra diretamente no desenho do ícone */
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
 
     .whatsapp-float:hover {
         transform: scale(1.1);
@@ -183,6 +206,7 @@
 </body>
 
 </html>
+
 
 
 
