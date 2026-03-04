@@ -9,7 +9,7 @@
     <style>
         html {
             scroll-behavior: smooth; 
-            scroll-padding-top: 70px; 
+            scroll-padding-top: 70px; /* Ajuste para o menu fixo não cobrir o título */
         }
         body { background-color: #729ac3; } 
 
@@ -21,6 +21,7 @@
             align-items: center;
             justify-content: center;
         }
+        
         .feed-container {
             max-width: 800px;
             margin: 0 auto;
@@ -29,14 +30,23 @@
             border-radius: 5px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
-        .card { margin-bottom: 2rem; border: none; }
+
+        .card {
+            margin-bottom: 2rem;
+            border: none;
+        }
+
         section { padding: 40px 0; }
+        
         .nav-link { color: rgba(255,255,255,0.7) !important; }
         .nav-link:hover { color: white !important; }
 
-        h2, .card-body { text-align: center; width: 100%; }
+        h2, .card-body {
+            text-align: center;
+            width: 100%;
+        }
 
-        /* Estilo do Botão WhatsApp para não quebrar a imagem */
+        /* Correção do Botão WhatsApp Flutuante */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -44,16 +54,23 @@
             bottom: 40px;
             right: 40px;
             background-color: #25d366;
-            border-radius: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
             transition: transform 0.3s ease;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-float img { width: 35px; height: auto; }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float img {
+            width: 35px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +91,7 @@
 </nav>
 
 <main class="container feed-container">
+    
     <section id="hm" class="text-center">
         <h6 class="text-muted">Últimas novidades</h6>
         <div class="card p-3 shadow-sm">
@@ -81,7 +99,73 @@
         </div>
     </section>
 
-    </main>
+    <section id="sb">
+        <h2 class="mb-4">Sobre mim</h2>
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <p>Criar: desenhando, escrevendo, ou programando, é a minha locomotiva.<br>
+                   Comecei no desenho manual, passei a escrever poemas, depois contos,<br>
+                   e há alguns anos passei a programar. Criar me motiva demais.</p>
+                <p>Esse portfólio veio da necessidade de colocar online um pouco do que fiz ao longo desses anos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pj">
+        <h2 class="mb-4">Projetos</h2>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text fw-bold">Cartões de Visita</p>
+                <a href="https://www.canva.com/design/DAG4cObxsq4/C1UWwV5m5uPWkCOHw1ksMA/view" target="_blank">Ver modelos no Canva</a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text fw-bold">Panfletos</p>
+                <a href="https://www.canva.com/design/DAG4cObxsq4/C1UWwV5m5uPWkCOHw1ksMA/view" target="_blank">Ver modelos no Canva</a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-primary">
+            <div class="card-body">
+                <h5 class="text-primary">Modelagem de Banco de Dados</h5>
+                <p class="card-text">Estrutura completa para gestão de doações e voluntários.</p>
+                <a href="https://www.canva.com/design/DAG3OMq6nqM/93lJlxHrbG8AtnsmsGcfqw/view" target="_blank">Ver o modelo no Canva</a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm bg-dark text-white">
+            <div class="card-body">
+                <h5>Desenvolvimento Back-end</h5>
+                <p class="card-text">Algoritmos e lógica em Python e Java.</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text fw-bold">Protótipos no Figma</p>
+                <a href="https://www.figma.com/design/3RuNkcs54c7EpCntNZegXw/PetPlace--Community-?node-id=0-1" target="_blank">Ver no Figma</a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text fw-bold">Amostra Site em Canva</p>
+                <a href="https://www.canva.com/design/DAHCuDlYRzU/tsTfpzunD-5hmISpJeBqEQ/view" target="_blank">Ver o modelo no Canva</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ct" class="text-center border-top">
+        <h2 class="mt-4">Contato</h2>
+        <p>Vamos conversar?</p>
+        <p style="font-weight: bold;">Email:</p>
+        <p>cm_fwmoura@hotmail.com</p>
+    </section>
+
+</main>
 
 <a href="https://wa.me/5524988299581" class="whatsapp-float" target="_blank">
     <img src="img/img/icone-do-design-whatsapp.png" alt="WhatsApp">
